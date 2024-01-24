@@ -1,0 +1,12 @@
+body{
+    background: #5e3dc8;
+    text-align:center;
+    padding: 10px;
+}
+
+#melodyOutput{
+    margin-top:20px;
+    padding:100px;
+    border: radius 8px;
+    box-shadow: 0 0 10px lightgrey
+}

@@ -36,3 +36,40 @@ function chargebattery() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
+
+  // Function to simulate fetching data from an API with a delay
+function fetchData() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve("Data has been fetched!");
+      }, 2000); // Simulating a delay of 2 seconds
+    });
+  }
+  
+  // Async function representing a sequence of events
+  async function fetchDataSequence() {
+    
+    outputHTML.textContent = "Start fetching data...";
+    let outputHTML = documentgetElementId('myPromiseOutput');
+
+    console.log("Start fetching data...");
+  
+    try {
+      // Step 1: Fetching data
+      const data = await fetchData();
+      console.log(data);
+  
+      // Step 2: Processing data
+      console.log("Processing the fetched data...");
+  
+      // Step 3: Displaying the processed data
+      console.log("Data processing complete!");
+    } catch (error) {
+      console.error("Error fetching or processing data:", error);
+    }
+  
+    console.log("End of the sequence.");
+  }
+  
+  // Trigger the sequence
+  fetchDataSequence();

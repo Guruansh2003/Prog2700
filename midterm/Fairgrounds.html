@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FairStyles.css">
+    <title>Fairground Academy Ticket System</title>
+	<style>
+body,h1 {font-family: "Raleway", sans-serif}
+
+body {
+  background-image: url('images/1142.jpg');
+
+  background-position: center;
+  background-size: cover;
+  background-repeat:no-repeat;
+  width:100%;
+}
+
+@media (max-width: 499px) {
+    #ticket-container{
+        display: block;
+  	
+    }
+	body{
+		background-size: cover;
+	}
+    .ticket{
+        margin-top: 15px;
+        height: 10px;
+        width: 190px;
+    }
+    h1{
+        color: #FFA500;
+    }
+    #cart{
+        width: 350px;
+        height: 300px;
+    }
+}
+</style>
+	
+</head>
+<body>
+<h1>Ticket Sales</h1>
+    <div id="ticket-container">
+        <div class="ticket" data-price="10" data-ticket="fun-pass">
+            Fun Pass - $10
+        </div>
+        <div class="ticket" data-price="5" data-ticket="carousel-pass">
+            Carousel Pass - $5
+        </div>
+        <div class="ticket" data-price="8" data-ticket="rollercoaster-pass">
+            Rollercoaster Pass - $8
+        </div>
+    </div>
+
+    <div id="cart-container">
+        <div id="cart" class="droppable">
+            <p>Cart</p>
+        </div>
+    </div>
+
+    <div id="dialog">
+        <p id="dialog-message">Drag tickets to the cart!</p>
+    </div>
+
+    <div class="total_price"> Total Price : <span id="total_amount" > 0</span> </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="FairScripts.js"></script>
+</body>
+</html>

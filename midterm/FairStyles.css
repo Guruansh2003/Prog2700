@@ -1,0 +1,83 @@
+#ticket-container {
+    display: flex;
+    gap: 10px;
+}
+
+.ticket {
+    border-right: 15px solid orange;
+    border-left: 15px solid orange;
+    padding: 20px 40px;
+    cursor: pointer;
+	background:yellow;
+	font-weight:bold;
+	text-decoration: red underline overline wavy; 
+    animation: shake 2s infinite; 
+    /* z-index: 10; */
+	
+}
+.total_price{
+    border-right: 15px solid orange;
+    border-left: 15px solid orange;
+    padding: 20px 40px;
+    cursor: pointer;
+	background:yellow;
+	font-weight:bold;
+	text-decoration: red underline overline wavy; 
+    animation: shake 2s infinite; 
+    width: fit-content;
+}
+#cart-container {
+    margin-top: 20px;
+}
+
+#cart {
+    width: 50%;
+    height: 50vh;
+    border: 2px dashed #333;
+	background: #ff33cc;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+   
+}
+@media (max-width:700px) {
+    #cart{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+
+.droppable {
+    background-color: #f0f0f0;
+
+}
+#dialog {
+ 	background: purple;
+	width:550px;
+	height:350px;
+	padding:20px 30px;
+	border:1px solid purple;
+	color:white;
+	font-weight:bold;
+}
+#dialog-message {
+    text-align: center;
+}
+
+
+
+/* Keyframe Animation */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+/* Responsiveness */
